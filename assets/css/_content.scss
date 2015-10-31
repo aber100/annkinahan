@@ -1,0 +1,65 @@
+.hero {
+  min-height: calc(100vh - #{$header-height});
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-image: url(../images/humphreys-2.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: 0 10px 10px rgba(0,0,0,.25) inset;
+  .touchevents & {
+    background-attachment: scroll;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background: $blue-dark;
+    opacity: .2;
+    @extend %full-box;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    @include transform(translateY(-50%));
+    @include media-breakpoint-up(lg) {
+      @include transform(translateY(60%));
+    }
+  }
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+}
+
+#angles {
+  text-align: center;
+  position: relative;
+  @extend %band-skin-blue;
+  @include clip-path(polygon(0 0, 100% 0, 100% 100%, 0 80%));
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right:0;
+    top: calc(-2rem + 1px);
+    height: 2rem;
+    @extend %band-skin-blue;
+    @include clip-path(polygon(0 100%, 100% 0, 100% 100%, 0 100%));
+  }
+}
+
+#github {
+  text-align: center;
+  p {
+    @include make-col-span(12);
+    @include media-breakpoint-up(lg) {
+      @include make-col-span(8);
+      @include make-col-offset(2);
+    }
+  }
+}
+

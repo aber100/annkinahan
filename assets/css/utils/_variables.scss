@@ -1,0 +1,42 @@
+// Colors
+$gray-dark: #33373b;
+$gray-medium: #757e87;
+$gray-light: lighten(#757e87, 40%);
+$blue: #6993bb;
+$blue-dark: darken($blue, 30%);
+$orange: #EC4629;
+$gold: #cf9120;
+
+// Fonts
+$font-base: 'Open Sans', sans-serif;
+$font-header: 'Open Sans Condensed', sans-serif;
+
+// Grid
+$enable-flex: false;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px
+) !default;
+$grid-columns:               12 !default;
+$grid-gutter-width:          1.875rem !default;
+
+// Header
+$header-height: 5rem;
+
+// Bands
+$vertical-padding: 5rem;
+
+// Transitions
+$transition-time: .2s;
+
+// Buttons
+$radius-sm: .3rem;

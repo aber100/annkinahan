@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Demo Site
+    link(href="css/site.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700", rel="stylesheet")
+    //if lt IE 9
+      script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+      script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+  body
+    header
+      .container
+        h3.site-title Demo Site
+        #navbox.navbox
+          button#navboxShow.btn.show-nav
+            span.sr-only Show navigation
+          button#navboxClose.btn.close
+            span.sr-only Close
+          nav(role="navigation")
+            a(href="#angles") Angles
+            a(href="#github") GitHub
+    section.hero(role="banner")
+      .container
+        h1.hero-title Exploring Frontend Development
+        p (Filling the viewport with the vh unit.)
+    section#angles.band
+      .container
+        h2 Angles with clip-path
+    section#github.band
+      .container
+        h2 Find the Code on GitHub
+        p Thanks for viewing my first attempt at a demo site. It is still just a wee thing, but will grow in time. If you would like to see how I set up the project, please check it out on GitHub.
+        p
+          a(href='http://github.com/aber100/annkinahan', target='_blank') GitHub
+    footer
+      .container
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    // To do: combine javascript
+    script(src="js/modernizr-custom.js")
+    script(src="js/site.js")

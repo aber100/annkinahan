@@ -1,0 +1,12 @@
+// To Do: move to postcss
+
+@mixin clip-path($value) {
+  -webkit-clip-path: $value;
+  clip-path: $value;
+}
+
+@mixin transform($value) {
+  -ms-transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
+}
